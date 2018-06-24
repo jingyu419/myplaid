@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plaid API</title>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- Boostrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+ <body>
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="/authentication"class="navbar-brand"><strong id="loggedUsername">Plaid API </strong></a>
+                    </div>
+                    <div class="nav navbar-nav">
+                        <a href="/authentication" class="navbar-brand"><strong><small>Authentication</small></strong></a>
+                    </div>
+                    <div class="nav navbar-nav">
+                        <a href="/transaction" class="navbar-brand"><strong><small>Transaction</small></strong></a>
+                    </div>
+                    <div class="nav navbar-nav">
+                        <a href="/balance" class="navbar-brand"><strong><small>Balance</small></strong></a>
+                    </div>
+                    <div class="nav navbar-nav">
+                        <a href="remove" class="navbar-brand"><strong><small>Remove</small></strong></a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container" id = "Authentication">
+               <h1>Authentication</h1>
+               <form action="/", method="post" id="myform">
+                Client ID:<br> <input type="password" name="clientid"  id="Authentication_clientId" value="5ac3ed118d923954e3a45165"><br>
+                Secret:  <br>  <input type="password" name="secret"  id="Authentication_secret" value="6c1077263fc2c95cadd9f1a7b2b9dd"><br>
+                Token:   <br>  <input type="password" name="token"  id="Authentication_token" value="access-development-a759fcbb-3dcd-4181-ba5a-beae0bb4af3f"><br>
+                <input type="submit" id = "Authentication_submit" value="Submit">
+           </form>   
+            </div>
+            <div>
+              <!--<pre id="authenticationMessage"></pre> -->
+              <div id="errorMessage"></div>
+
+             <!-- <div><pre></pre></div> -->
+             <%if (title) { %>
+               <pre><%= title%></pre>
+               <p><%= title.statusCode%></p>
+            <% } %>
+            </div>
+</body>
+</html>
